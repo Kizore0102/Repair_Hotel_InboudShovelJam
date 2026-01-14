@@ -10,4 +10,4 @@ feito por:
 
 
 repositório do Opaline:
-/https://github.com/0paline/Repair-Apocalipse
+https://github.com/0paline/Repair-Apocalipse
