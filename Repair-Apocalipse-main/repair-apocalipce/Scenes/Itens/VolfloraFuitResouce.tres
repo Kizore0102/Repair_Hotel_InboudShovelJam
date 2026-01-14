@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://dl8aysirl605w"]
+
+[ext_resource type="Texture2D" uid="uid://b8yokyhqf60e6" path="res://TestAsetts/EnergyFruit.png" id="1_nt6io"]
+[ext_resource type="Script" uid="uid://dnp7hgey8hsxu" path="res://Scripts/Resouces/ColletableItenMaterial.gd" id="2_nt450"]
+
+[resource]
+script = ExtResource("2_nt450")
+Name = "Volflora fruit"
+Textura = ExtResource("1_nt6io")
+Description = "The smal fruit of the volflora plant, used to power simple things"
+metadata/_custom_type_script = "uid://dnp7hgey8hsxu"

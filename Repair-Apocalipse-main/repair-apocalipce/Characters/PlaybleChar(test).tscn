@@ -1,0 +1,61 @@
+[gd_scene load_steps=12 format=3 uid="uid://cvstk63nqhhy7"]
+
+[ext_resource type="Texture2D" uid="uid://o8yyb0xu2gkh" path="res://TestAsetts/SlimeHat.png" id="1_3n5kn"]
+[ext_resource type="Script" uid="uid://g6hc57tn0hiq" path="res://Scripts/PlaybleCharTest.gd" id="1_53khy"]
+[ext_resource type="Script" uid="uid://gjwnxo773d8" path="res://Scripts/ComponentsScript/Input_Component.gd" id="2_aaua4"]
+[ext_resource type="Resource" uid="uid://yb3s85jckryu" path="res://Scenes/ResoucesScenes/PlayerStatsResouce.tres" id="2_qfeuj"]
+[ext_resource type="Script" uid="uid://br1qhgvq6rls4" path="res://Scripts/ComponentsScript/MoveComponent.gd" id="3_3a58h"]
+[ext_resource type="Resource" uid="uid://qqbbydkihxge" path="res://Scenes/ResoucesScenes/UtilityFuncDIcs.tres" id="3_pa7kl"]
+[ext_resource type="Resource" uid="uid://dn0e2qsu6bi8e" path="res://Scenes/ResoucesScenes/InventroyResouce.tres" id="4_2vi0p"]
+[ext_resource type="Script" uid="uid://cjkgq77xlflim" path="res://Scripts/ComponentsScript/InventoryComponent.gd" id="8_2sanc"]
+[ext_resource type="PackedScene" uid="uid://c4okjep0mp6aa" path="res://Scenes/UiScenes/Inventory_Ui.tscn" id="8_qvnq4"]
+[ext_resource type="Script" uid="uid://squt83aob4o" path="res://Scripts/Resouces/DicionaryUtilitysFunc.gd" id="9_xoc56"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aaua4"]
+radius = 8.0
+
+[node name="HatSlime" type="CharacterBody2D"]
+collision_mask = 25160
+motion_mode = 1
+script = ExtResource("1_53khy")
+Atributo = ExtResource("2_qfeuj")
+DicResouce = ExtResource("3_pa7kl")
+NodeRefs = {
+"InputComponent": NodePath("InputCollector"),
+"InventoryComponent": NodePath("CharInventoryComponent"),
+"InventoryUi": NodePath("InventoryUi"),
+"MoveComponent": NodePath("PlayerMoveComponent")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3n5kn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_aaua4")
+
+[node name="InputCollector" type="Node" parent="."]
+script = ExtResource("2_aaua4")
+metadata/_custom_type_script = "uid://gjwnxo773d8"
+
+[node name="PlayerMoveComponent" type="Node" parent="."]
+script = ExtResource("3_3a58h")
+metadata/_custom_type_script = "uid://br1qhgvq6rls4"
+
+[node name="InventoryUi" parent="." instance=ExtResource("8_qvnq4")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -76.0
+offset_right = -43.0
+offset_bottom = -76.0
+InvenSize = 12
+metadata/_edit_use_anchors_ = true
+
+[node name="CharInventoryComponent" type="Node" parent="."]
+script = ExtResource("8_2sanc")
+DicResouce = ExtResource("9_xoc56")
+Inv = ExtResource("4_2vi0p")
+metadata/_custom_type_script = "uid://cjkgq77xlflim"

@@ -1,0 +1,34 @@
+[gd_scene load_steps=10 format=3 uid="uid://dskaur00wxljo"]
+
+[ext_resource type="Script" uid="uid://ddgjliv82561n" path="res://Scripts/EntityScript/MysteryBox(test).gd" id="1_jwmrj"]
+[ext_resource type="Texture2D" uid="uid://b6m3dn57h8rls" path="res://TestAsetts/MysteryBox.png" id="1_owhuu"]
+[ext_resource type="Script" uid="uid://dnp7hgey8hsxu" path="res://Scripts/Resouces/ColletableItenMaterial.gd" id="2_f85j8"]
+[ext_resource type="Resource" uid="uid://byxbkqne5nmc" path="res://Scenes/Itens/ConcretStone.tres" id="3_4pjdl"]
+[ext_resource type="Resource" uid="uid://cpyxhm5yfp63o" path="res://Scenes/Itens/ScrapMetalResouce.tres" id="4_ml806"]
+[ext_resource type="Resource" uid="uid://dl8aysirl605w" path="res://Scenes/Itens/VolfloraFuitResouce.tres" id="5_thefx"]
+[ext_resource type="PackedScene" uid="uid://cscm1mra68nmc" path="res://Scenes/Itens/CollectableItem.tscn" id="6_4pjdl"]
+[ext_resource type="Resource" uid="uid://qqbbydkihxge" path="res://Scenes/ResoucesScenes/UtilityFuncDIcs.tres" id="6_f85j8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7a353"]
+radius = 22.0227
+
+[node name="Area2d" type="Area2D"]
+collision_layer = 512
+monitorable = false
+script = ExtResource("1_jwmrj")
+SpawnableItens = Array[ExtResource("2_f85j8")]([ExtResource("3_4pjdl"), ExtResource("4_ml806"), ExtResource("5_thefx")])
+NodeRefs = {
+"Collision": NodePath("CollisionShape2D"),
+"Pivot": NodePath("Node2D"),
+"Sprite": NodePath("Sprite2D")
+}
+DicResouce = ExtResource("6_f85j8")
+DropItem = ExtResource("6_4pjdl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_owhuu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7a353")
+
+[node name="Node2D" type="Node2D" parent="."]

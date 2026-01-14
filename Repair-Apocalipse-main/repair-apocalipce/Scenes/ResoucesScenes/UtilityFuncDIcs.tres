@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="DicFuncUtility" load_steps=2 format=3 uid="uid://qqbbydkihxge"]
+
+[ext_resource type="Script" uid="uid://squt83aob4o" path="res://Scripts/Resouces/DicionaryUtilitysFunc.gd" id="1_dkouh"]
+
+[resource]
+script = ExtResource("1_dkouh")
+metadata/_custom_type_script = "uid://squt83aob4o"

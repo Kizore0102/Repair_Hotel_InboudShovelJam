@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://cpyxhm5yfp63o"]
+
+[ext_resource type="Texture2D" uid="uid://duv2fdyg4hrag" path="res://TestAsetts/MetalSheet.png" id="1_qu3mb"]
+[ext_resource type="Script" uid="uid://dnp7hgey8hsxu" path="res://Scripts/Resouces/ColletableItenMaterial.gd" id="2_5ijms"]
+
+[resource]
+script = ExtResource("2_5ijms")
+Name = "ScrapMetal"
+Textura = ExtResource("1_qu3mb")
+Description = "Old piece of metal used for varius types of construction"
+metadata/_custom_type_script = "uid://dnp7hgey8hsxu"

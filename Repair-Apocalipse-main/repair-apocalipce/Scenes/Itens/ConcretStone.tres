@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://byxbkqne5nmc"]
+
+[ext_resource type="Texture2D" uid="uid://clhk0nfhxjoqy" path="res://TestAsetts/ConcretScrap.png" id="1_3t8wd"]
+[ext_resource type="Script" uid="uid://dnp7hgey8hsxu" path="res://Scripts/Resouces/ColletableItenMaterial.gd" id="2_lo2h4"]
+
+[resource]
+script = ExtResource("2_lo2h4")
+Name = "ConcretStone"
+Textura = ExtResource("1_3t8wd")
+Description = "A block of concrete stone, it can be recycled into some ciment powder"
+metadata/_custom_type_script = "uid://dnp7hgey8hsxu"
